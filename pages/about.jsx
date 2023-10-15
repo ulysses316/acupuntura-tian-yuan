@@ -6,7 +6,7 @@ import Footer from "@/components/common/Footer";
 import CKeditor from "@/components/common/CKeditor";
 import { useState, useEffect } from "react";
 
-export default function about() {
+export default function About() {
    const [editorLoaded, setEditorLoaded] = useState(false);
    const [data, setData] = useState("");
    useEffect(() => {

@@ -12,8 +12,8 @@ export default function fisioterapia() {
                Fisioterapia y rehabilitación físca
             </h1>
             <p className="py-3 text-center text-lg">
-               "El arte y la ciencia del tratamiento por medio del ejercicio terapéutico, calor,
-               frío, luz, agua, masaje y electricidad” OMS
+               &quot;El arte y la ciencia del tratamiento por medio del ejercicio terapéutico,
+               calor, frío, luz, agua, masaje y electricidad&quot; OMS
             </p>
             <div className="flex justify-center py-3">
                <img
