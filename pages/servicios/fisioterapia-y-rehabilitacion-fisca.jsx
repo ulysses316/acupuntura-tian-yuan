@@ -37,7 +37,7 @@ export default function fisioterapia() {
                />
             </div>
             <p className="py-3 text-center text-2xl font-bold">Tratamiento para lesiones como</p>
-            <div className="flex items-center justify-center gap-64 py-3">
+            <div className="hidden items-center justify-center gap-64 py-3 md:flex">
                <ul className="list-disc text-lg">
                   <li>Esguinces</li>
                   <li>Luxaciones</li>
@@ -50,6 +50,25 @@ export default function fisioterapia() {
                </ul>
 
                <ul className="list-disc text-lg">
+                  <li>Cervicalgias (dolor de cuello)</li>
+                  <li>Ciátalgia</li>
+                  <li>Lesiones deportivas</li>
+                  <li>Parálisis facial.</li>
+                  <li>Lesiones neuromusculares</li>
+                  <li>Fibromialgia</li>
+                  <li>Lumbalgias (dolor de espalda baja)</li>
+               </ul>
+            </div>
+            <div className="flex items-center justify-center gap-64 py-3 md:hidden">
+               <ul className="list-disc text-lg">
+                  <li>Esguinces</li>
+                  <li>Luxaciones</li>
+                  <li>Fracturas</li>
+                  <li>Artrosis</li>
+                  <li>Bursitis</li>
+                  <li>Tendinitis</li>
+                  <li>Osteoporosis</li>
+                  <li>Artritis reumatoide</li>
                   <li>Cervicalgias (dolor de cuello)</li>
                   <li>Ciátalgia</li>
                   <li>Lesiones deportivas</li>
