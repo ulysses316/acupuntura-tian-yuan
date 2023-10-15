@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,150 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+/* Para los títulos */
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Para el texto del cuerpo */
+p,
+button,
+span,
+strong,
+b,
+a {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ck-content h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content h5 {
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content h6 {
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ck-content p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ck-content strong {
+  font-weight: bold;
+}
+
+.ck-content ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+.ck-content li {
+  display: list-item;
+}
+
+.ck-content ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+.ck-content em {
+  font-style: italic;
+}
+
+.ck-content pre {
+  white-space: pre-wrap;
+  max-width: 100%;
+  height: auto;
+  font-size: 16px;
+}
+
+.ck-content code {
+  font-size: 16px;
+  white-space: pre-wrap;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .ck-content pre {
+    font-size: 11px;
+  }
+
+  .ck-content code {
+    font-size: 11px;
+  }
 }
