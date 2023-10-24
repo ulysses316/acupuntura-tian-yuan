@@ -10,6 +10,7 @@ import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import Tabs from "@/components/common/elements/Tabs";
 import CardBody from "@/components/common/cards/CardBody";
 import CardServices from "@/components/common/cards/CardServices";
+import CardCarousel from "@/components/carouseles/CardCarousel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,20 +21,9 @@ export default function Home() {
          <MainCarousel />
          <MainLayout>
             <WhatsAppWidget />
-            {/* <Tabs /> */}
-
-            <div className="my-16 grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] justify-center gap-10">
-               <CardBody>
-                  <CardServices />
-               </CardBody>
-               <CardBody>
-                  <CardServices />
-               </CardBody>
-               <CardBody>
-                  <CardServices />
-               </CardBody>
-            </div>
-
+            <h2 className="text-center py-12 text-3xl font-bold">Nuestros Servicios más populares</h2>
+            <CardCarousel/>
+            <h2 className="text-center py-12 text-3xl font-bold">Visita nuestras instalaciones</h2>
             <Map className="h-96 w-full" />
          </MainLayout>
          <Footer />

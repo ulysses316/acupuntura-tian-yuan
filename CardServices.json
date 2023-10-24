@@ -1,0 +1,38 @@
+[
+   {
+      "title": "Acupuntura",
+      "desc": "La acupuntura es una terapia, que pertenece a uno de los 7 pilares de la medicina tradicional china, donde se utilizan agujas especiales que se aplican en puntos específicos para modular el organismo y generar una respuesta con una finalidad terapéutica.",
+      "url": "/servicios/acupuntura",
+      "benefits": ["Dolor muscular", "Dolor en articulaciones", "Esguinces", "Colitis", "Gastritis", "Reeflujo", "Dolor o colicos menstruales", "Dolor de Cabeza", "Entre muchas otras"]
+   },
+   {
+      "title": "Auriculoterapia",
+      "desc": "Es una modalidad de tratamiento de medicina tradicional china en la cual la superficie externa de la oreja o aurícula es estimulada con el objetivo de aliviar patologías en otras regiones del cuerpo, en donde se puede utilizar balines, agujas, semillas o tachuelas.",
+      "url": "/servicios/auriculoterapia",
+      "benefits": ["Insomnio", "Control del apetito", "Control de peso", "Estrés", "Dolor articular", "Dolor muscular", "Dolor de Cabeza", "Esguinces", "Ansiedad", "Parálisis facial", "Entre muchas otras"]
+   },
+   {
+      "title": "Moxibustion",
+      "desc": "Es parte integral de la medicina tradicional china, basada en la estimulación de puntos de acupuntura por medio del calor, a través de la combustión de una planta llamada >artemisa vulgaris< , con una finalidad terapéutica; genera un efecto parecido que el calentamiento con láser, haciendo que los vasos sanguíneos se dilaten y lleven todos los componentes sanguíneos a la zona tratada",
+      "url": "/servicios/moxibustion",
+      "benefits": []
+   },
+   {
+      "title": "Fisioterapia y rehabilitación físca",
+      "desc": "La fisioterapia tiene como objetivo mejorar la función articular, muscular y nerviosa, con la finalidad de recuperar y aumentar la calidad de vida de las personas; en las esferas de promoción, prevención, tratamiento o intervención, habilitación y rehabilitación. Estas esferas abarcan el bienestar físico, psicológico, emocional y social de un individuo.",
+      "url": "/servicios/fisioterapia-y-rehabilitacion-fisca",
+      "benefits": ["Esguinces", "Esguinces", "Luxaciones", "Fracturas","Artrosis", "Bursitis", "Tendinitis", "Osteoporosis", "Artritis reumatoide"]
+   },
+   {
+      "title": "Doula",
+      "desc": "Son las encargadas de darle a la mujer embarazada seguridad y confianza en el proceso de acompañamiento durante estas etapas. Resuelven dudas acerca del embarazo y parto, así como dudas de los cuidados del recién nacido, ayudan con la lactancia materna.",
+      "url": "/servicios/doula",
+      "benefits": ["Mejora el vínculo de padres con bebé", "Disminuye la incidencia de cesáreas electivas por miedo de la madre", "Ayuda a tomar una decisión mas consiente sobre su cuerpo y como quiere que sea el nacimiento de su bebé", "Disminuye la incidencia de depresión postparto", "Disminuye el uso de epidural"]
+   },
+   {
+      "title": "Masajes",
+      "desc": "El masaje es un procedimiento terapéutico en el que se utilizan las manos del terapeuta como una fuerza mecánica sobre el cuerpo mediante técnicas especiales y dosificadas a las necesidades de cada paciente. La finalidad es terapéutica ayuda a aliviar el dolor, mejora la recuperación de algunas lesiones y favorece el bienestar y relajación de las personas.",
+      "url": "/servicios/masajes",
+      "benefits": ["Relajantes", "Con ventosas", "Deportivo", "Reductivo", "Reflexología podal", "Piedras calientes"]
+   }
+]
