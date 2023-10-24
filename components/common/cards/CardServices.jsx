@@ -9,7 +9,7 @@ export default function CardServices({data}) {
             <div>
                <img
                   className="w-full rounded-lg"
-                  src="https://dummyimage.com/300x300/433/aaa"
+                  src={data?.img || "https://dummyimage.com/300x300/433/aaa"}
                   alt=""
                />
             </div>
