@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-export default function Button({ children, onClick, className, type="button" }) {
+export default function Button({ children, onClick, className, type = "button" }) {
    return (
       <button
          type={type}

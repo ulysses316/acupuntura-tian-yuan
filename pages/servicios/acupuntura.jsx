@@ -11,12 +11,14 @@ export default function acupuntura() {
          <MainLayout className="my-8 lg:px-52">
             <h1 className="text-center text-3xl font-bold">Acupuntura</h1>
             <div className="mt-8 flex flex-col items-center justify-center gap-6 py-3">
-               <img
-                  className="aspect-square w-56 rounded-full border"
-                  src="/services/20231014-acupuntura-1.png"
-                  alt=""
-               />
-               <p className="text-lg">
+               <div className="flex justify-center gap-3 py-3">
+                  <img
+                     className="w-full rounded-md xl:w-2/3"
+                     src="/services/20231014-acupuntura-1.png"
+                     alt=""
+                  />
+               </div>
+               <p className="text-justify text-lg">
                   La acupuntura es una terapia, que pertenece a uno de los 7 pilares de la medicina
                   tradicional china, donde se utilizan agujas especiales que se aplican en puntos
                   específicos para modular el organismo y generar una respuesta con una finalidad
@@ -33,7 +35,7 @@ export default function acupuntura() {
                respaldan su eficacia.
             </p>
             <p className="py-3 text-lg">Entre las enfermedades que puede tratar son:</p>
-            
+
             {/* <div className="flex justify-center py-3">
                <img
                   className="w-full max-w-[500px]"
@@ -45,7 +47,7 @@ export default function acupuntura() {
             <div className="flex flex-col items-center justify-center py-3">
                <div className="flex items-center justify-center gap-4">
                   <img className="w-10 sm:w-16" src="/logo.png" alt="" />
-                  <h2 className="text-center text-xl sm:text-2xl font-bold text-primary-blue-alter">
+                  <h2 className="text-center text-xl font-bold text-primary-blue-alter sm:text-2xl">
                      Terapias integrativas Tian Yuan
                   </h2>
                   <img className="w-12 sm:w-20" src="/logo2.png" alt="" />

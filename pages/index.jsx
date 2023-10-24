@@ -22,7 +22,7 @@ export default function Home() {
             <WhatsAppWidget />
             {/* <Tabs /> */}
 
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10 my-16 justify-center">
+            <div className="my-16 grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] justify-center gap-10">
                <CardBody>
                   <CardServices />
                </CardBody>

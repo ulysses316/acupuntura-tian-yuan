@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import styles from '@/styles/article.module.css'
+import styles from "@/styles/article.module.css";
 
 export default function CKeditor({ onChange, editorLoaded, name, value }) {
    const editorRef = useRef();
@@ -16,7 +16,7 @@ export default function CKeditor({ onChange, editorLoaded, name, value }) {
       <>
          {editorLoaded ? (
             <CKEditor
-               className={ styles['ck-editor'] }
+               className={styles["ck-editor"]}
                type=""
                name={name}
                editor={ClassicEditor}
@@ -34,7 +34,8 @@ export default function CKeditor({ onChange, editorLoaded, name, value }) {
 }
 
 // Implementacion
-{/* <div>
+{
+   /* <div>
    <CKeditor
       name="description"
       onChange={(data) => {
@@ -42,4 +43,5 @@ export default function CKeditor({ onChange, editorLoaded, name, value }) {
       }}
       editorLoaded={editorLoaded}
    />
-</div>; */}
+</div>; */
+}

@@ -10,11 +10,11 @@ const navigation = [
       label: "Fisioterapia y rehabilitación física",
       href: "/servicios/fisioterapia-y-rehabilitacion-fisca",
    },
-   { label: "Medios físicos", href: "/servicios/medios-fisicos" },
    { label: "Doula", href: "/servicios/doula" },
+   { label: "Masajes", href: "/servicios/masajes" },
 ];
 
-export default function DropDown() {
+export default function DropDownServices() {
    return (
       <Menu as="div" className="relative z-10 inline-block text-left">
          <div>

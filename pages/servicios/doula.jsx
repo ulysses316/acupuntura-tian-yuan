@@ -9,13 +9,13 @@ export default function fisicos() {
          <Navbar />
          <MainLayout className="my-8 min-h-[69dvh] lg:px-52">
             <h1 className="py-3 text-center text-3xl font-bold">Doula</h1>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Las doulas son mujeres con formación y experiencia que acompañan a otras mujeres
                brindando apoyo practico y emocional durante el proceso de embarazo, parto y
                postparto; la palabra viene de griego “sirva” mujer que sirve, y del hindu “mujer
                experimentada”
             </p>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Son las encargadas de darle a la mujer embarazada seguridad y confianza en el proceso
                de acompañamiento durante estas etapas. Resuelven dudas acerca del embarazo y parto,
                así como dudas de los cuidados del recién nacido, ayudan con la lactancia materna,
@@ -26,21 +26,40 @@ export default function fisicos() {
                bebé, disminuye la incidencia de depresión postparto, disminuye el uso de epidural,
                entre otras.
             </p>
+            <div className="flex flex-col xl:flex-row justify-center gap-3 py-3">
+               <img
+                  className="w-full rounded-md xl:w-1/2"
+                  src="/services/20231024-doula-1.jpg"
+                  alt=""
+               />
+               <img
+                  className="w-full rounded-md xl:w-1/2"
+                  src="/services/20231024-doula-2.jpg"
+                  alt=""
+               />
+            </div>
             <h2 className="py-3 text-center text-2xl font-bold">
                Cursos de psicoprofilaxis prenatal
             </h2>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Estos cursos también llamados cursos de preparación para el nacimiento son un
                conjunto de actividades, métodos, y técnicas ligadas a brindar atención integral a la
                mujer durante todo el proceso de embrazo, parto y puerperio, con la participación
                activa del padre y la familia.
             </p>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Tiene como finalidad educar, fortalecer, preparar y motivar a las familias para
                llevar un embarazo saludable y un parto respetado
             </p>
+            <div className="flex justify-center gap-3 py-3">
+               <img
+                  className="w-full rounded-md xl:w-2/3"
+                  src="/services/20231024-doula-3.jpg"
+                  alt=""
+               />
+            </div>
             <h3 className="py-3 text-xl font-bold">¿Qué es un parto respetado o humanizado?</h3>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Que extraño concepto es para algunos siendo humanos hablar de parto humanizado; se
                imaginaria uno que todos los partos son así, ya que todos somos raza humana y nacemos
                “humanizadamente”; sin embargo a lo largo de los años y de la historia se fue
@@ -53,12 +72,12 @@ export default function fisicos() {
                derechos reproductivos de la mujer, generando lo que ahora conocemos como violencia
                obstétrica.
             </p>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Bajo este marco que vivimos en México es necesario crear recursos para que las
                mujeres y las familias puedan utilizar, con la finalidad de traer al mundo a un nuevo
                ser de una manera más respetada y consciente, a través de conocimiento e información
             </p>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Estos cursos están diseñados con esa finalidad, dirigidos a las mujeres y sus
                familias para prepararse física y emocionalmente con la finalidad de llevar un
                embarazo saludable y aprender los procesos naturales de su cuerpo para recibir a su
@@ -66,7 +85,7 @@ export default function fisicos() {
                saludable, individualizar a cada pareja de esta manera el nacimiento sea un proceso
                agradable y feliz.
             </p>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                Aprenderán sobre embarazo saludable, prevención de trastornos de la salud perinatal,
                salud emocional en el embarazo y postparto, parto humanizado y beneficio de sus
                técnicas como apego inmediato, libre movimiento, pinzamiento oportuno del cordón,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import DisclosureDrop from "../elements/DisclosureDrop";
+import DisclosureDrop from "../elements/DisclosureServices";
 import Divider from "../elements/Divider";
 
 export default function CardServices() {
@@ -21,7 +21,7 @@ export default function CardServices() {
                   Obcaecati dicta totam libero ut quia repudiandae doloremque animi earum nemo sed
                   corporis consequatur, maiores nobis corrupti voluptates saepe tenetur!
                </p>
-               <Divider/>
+               <Divider />
                <div className="justify-left flex flex-wrap gap-2 pt-2">
                   <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                      Perder peso

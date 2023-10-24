@@ -22,7 +22,7 @@ export default function fisioterapia() {
                   alt=""
                />
             </div>
-            <p className="py-3 text-lg">
+            <p className="py-3 text-justify text-lg">
                La fisioterapia tiene como objetivo mejorar la función articular, muscular y
                nerviosa, con la finalidad de recuperar y aumentar la calidad de vida de las
                personas; en las esferas de promoción, prevención, tratamiento o intervención,
@@ -84,6 +84,28 @@ export default function fisioterapia() {
                caídas y accidentes derivados de ellas, mejora su flexibilidad y retarda la pérdida
                de masa muscular
             </p>
+            <h1 className="py-3 text-3xl font-bold">Medios físicos</h1>
+            <p className="py-3 text-justify text-lg">
+               Son aquellos elementos físicos externos al cuerpo que el profesional de la salud
+               ocupa para intervenir en el paciente con finalidad terapéutica; van a controlar el
+               proceso inflamatorio, favorecen la recuperación de tejidos y ayudan a mejorar la
+               funcionalidad del órgano o extremidad que ha sido afectada.
+            </p>
+            <div className="flex justify-center py-3">
+               <img className="rounded-md xl:w-1/3" src="/services/medios-fisicos.png" alt="" />
+            </div>
+            <p className="py-3 text-lg">
+               Son dirigidos, dosificados, y especializados hacia cada paciente de acuerdo a sus
+               necesidades
+            </p>
+
+            <ul className="list-disc pl-4 text-lg">
+               <li>Tens</li>
+               <li>Radiofrecuencia</li>
+               <li>Ultrasonido</li>
+               <li>Compresas</li>
+               <li>Electroacupuntura</li>
+            </ul>
          </MainLayout>
          <Footer />
       </>

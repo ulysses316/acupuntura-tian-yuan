@@ -3,18 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./buttons/Button";
 import { RxHamburgerMenu } from "react-icons/rx";
-import DropDown from "./elements/Dropdown";
+import DropDownServices from "./elements/DropDownServices";
+import DropDownCourses from "./elements/DropDownCourses";
 import Divider from "./elements/Divider";
 import { AiOutlineClose } from "react-icons/ai";
+import DisclosureServices from "./elements/DisclosureServices";
+import DisclosureCourses from "./elements/DisclosureCourses";
 
 import { useState } from "react";
 
 const navigation = [
    { label: "Inicio", href: "/" },
    { label: "Nosotros", href: "/about" },
-   { label: "Servicios", component: <DropDown /> },
+   { label: "Servicios", component: <DropDownServices />, dropMenu: <DisclosureServices /> },
    { label: "Promociones", href: "#" },
-   { label: "Certificados", href: "#" },
+   { label: "Diplomados", component: <DropDownCourses />, dropMenu: <DisclosureCourses/> },
    { label: "Blog", href: "#" },
    { label: "Contacto", href: "#" },
 ];
@@ -64,7 +67,7 @@ export default function Navbar() {
                <ul className="items-left flex flex-col items-center justify-center gap-3 py-4 text-lg font-semibold">
                   {navigation.map((item, index) =>
                      item.component ? (
-                        <li key={index}>{item.component}</li>
+                        <li key={index}>{item.dropMenu}</li>
                      ) : (
                         <li key={index}>
                            <Link className="text-zinc-900" href={item.href}>
