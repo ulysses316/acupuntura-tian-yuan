@@ -7,7 +7,7 @@ export default function masajes() {
     return (
         <>
             <Navbar />
-            <MainLayout className="my-8 min-h-[69dvh] lg:px-52">
+            <MainLayout className="my-8 lg:px-52">
                 <h1 className="py-3 text-center text-3xl font-bold">Masajes</h1>
                 <p className="py-3 text-justify text-lg">
                     El masaje es un procedimiento terapéutico en el que se utilizan las manos del

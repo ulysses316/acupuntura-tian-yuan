@@ -4,7 +4,7 @@ import Divider from "../elements/Divider";
 
 export default function CardServices({data}) {
    return (
-      <div className="border py-2 px-4">
+      <div className="border py-2 px-4 rounded-md">
          <Link href={data.url}>
             <div>
                <img

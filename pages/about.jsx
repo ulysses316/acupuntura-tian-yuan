@@ -16,7 +16,7 @@ export default function About() {
       <>
          <Navbar />
          <MainLayout>
-            <div className="flex min-h-[74.9dvh] flex-col justify-center py-8 md:px-36">
+            <div className="flex flex-col justify-center py-8 md:px-36">
                <div className="mb-8 flex flex-col items-center justify-center">
                   {/* <h1 className="text-center text-3xl">Sobre nosotros</h1> */}
                   <h1 className="text-center text-3xl font-bold">B. Arely Oviedo Yañez</h1>

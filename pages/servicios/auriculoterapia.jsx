@@ -7,7 +7,7 @@ export default function acupuntura() {
    return (
       <>
          <Navbar />
-         <MainLayout className="my-8 min-h-[69dvh] lg:px-52">
+         <MainLayout className="my-8 lg:px-52">
             <h1 className="py-3 text-center text-3xl font-bold">Auriculoterapia</h1>
             <div className="flex flex-col xl:flex-row justify-center gap-3 py-3">
                <img

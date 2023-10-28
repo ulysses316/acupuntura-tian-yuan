@@ -47,6 +47,10 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.svg-container-crud svg{
+  font-size: 2.3em;
+}
+
 .ck-content h1 {
   display: block;
   font-size: 2em;

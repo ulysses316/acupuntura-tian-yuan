@@ -18,7 +18,7 @@ const navigation = [
    { label: "Servicios", component: <DropDownServices />, dropMenu: <DisclosureServices /> },
    { label: "Promociones", href: "#" },
    { label: "Diplomados", component: <DropDownCourses />, dropMenu: <DisclosureCourses/> },
-   { label: "Blog", href: "#" },
+   { label: "Blog", href: "/blog" },
    { label: "Contacto", href: "#" },
 ];
 

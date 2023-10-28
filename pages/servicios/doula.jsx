@@ -7,7 +7,7 @@ export default function fisicos() {
    return (
       <>
          <Navbar />
-         <MainLayout className="my-8 min-h-[69dvh] lg:px-52">
+         <MainLayout className="my-8 lg:px-52">
             <h1 className="py-3 text-center text-3xl font-bold">Doula</h1>
             <p className="py-3 text-justify text-lg">
                Las doulas son mujeres con formación y experiencia que acompañan a otras mujeres
