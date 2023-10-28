@@ -16,7 +16,7 @@ export default function TableData({ articles }) {
                         </thead>
                         <tbody className="bg-white dark:bg-slate-800">
                             {articles.map((item, index) => (
-                                <tr>
+                                <tr key={index}>
                                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
                                         <Link href={`http://localhost:3000/blog/${item.slug}`} target='__blank'>{item.title}</Link>
                                     </td>

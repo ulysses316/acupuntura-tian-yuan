@@ -19,7 +19,7 @@ import { AiFillFire, AiFillDelete, AiFillEdit } from 'react-icons/ai'
 import { FaHammer } from 'react-icons/fa'
 
 import supabase from "@/lib/clientSupaBase";
-export default function index({ articles }) {
+export default function Crud({ articles }) {
    const [form, setForm] = useState("")
    return (
       <>
