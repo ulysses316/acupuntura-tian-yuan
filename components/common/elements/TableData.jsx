@@ -21,7 +21,7 @@ export default function TableData({ articles }) {
                                         <Link href={`http://localhost:3000/blog/${item.slug}`} target='__blank'>{item.title}</Link>
                                     </td>
                                     <td className="max-md:hidden border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">
-                                        <Link href={`http://localhost:3000/blog/${item.slug}`} target='__blank'>http://localhost:3000/blog/{item.slug}</Link>
+                                        <Link href={`http://localhost:3000/blog/${item.slug}`} target='__blank'>{process.env.NEXT_PUBLIC_URL_SITE}/blog/{item.slug}</Link>
                                     </td>
                                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400 flex gap-4 sm:flex-row flex-col">
                                         <Button className={"bg-primary-blue text-white max-sm:px-2 max-md:px-3 max-md:text-xs"}>Editar</Button>
