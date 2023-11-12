@@ -8,7 +8,6 @@ import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import CardCarousel from "@/components/carouseles/CardCarousel";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
    return (
       <>

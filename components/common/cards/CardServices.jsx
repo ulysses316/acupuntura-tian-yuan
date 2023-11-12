@@ -21,7 +21,7 @@ export default function CardServices({data}) {
                <Divider />
                <div className="justify-left flex flex-wrap gap-2 pt-2">
                   {data.benefits?.map((item, index)=>(
-                     <span key={index} class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                     <span key={index} className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                         {item}
                      </span>
                   ))}

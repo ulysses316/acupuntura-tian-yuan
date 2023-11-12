@@ -1,3 +1,10 @@
+/**
+ * Handles a POST request to create an article.
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Promise<void>} - A promise that resolves to void.
+ */
 import supabase from "@/lib/clientSupaBase";
 
 const handler = async (req, res) => {

@@ -7,6 +7,8 @@ import Footer from "@/components/common/Footer";
 import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import CardBody from "@/components/common/cards/CardBody";
 import Modal from "@/components/common/elements/Modal";
+import logOut from "@/lib/logout";
+import { useRouter } from "next/router";
 
 import CreateArticle from "@/components/common/Forms/POST/CreateArticle";
 import CreateService from "@/components/common/Forms/POST/CreateService";
@@ -15,12 +17,13 @@ import CreatePromotion from "@/components/common/Forms/POST/CreatePromotion";
 import TableData from "@/components/common/elements/TableData";
 
 import { GrArticle } from 'react-icons/gr'
-import { AiFillFire, AiFillDelete, AiFillEdit } from 'react-icons/ai'
+import { AiFillFire, AiFillDelete, AiFillEdit, AiOutlineUserAdd, AiOutlineLogout } from 'react-icons/ai'
 import { FaHammer } from 'react-icons/fa'
 
 import supabase from "@/lib/clientSupaBase";
 export default function Crud({ articles }) {
    const [form, setForm] = useState("")
+   const router = useRouter();
    return (
       <>
          <Navbar />
@@ -28,6 +31,18 @@ export default function Crud({ articles }) {
             <WhatsAppWidget />
             <h1 className="py-12 text-center text-3xl font-bold">Centro de creacion de contenido:</h1>
             <div className="mb-12 grid grid-cols-1  md:grid-cols-3 gap-8">
+               <Link href="/signup">
+                  <CardBody className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
+                     <AiOutlineUserAdd />
+                     <h2 className="font-bold">Crear usuario</h2>
+                  </CardBody>
+               </Link>
+               <CardBody
+                  onClick={() => { logOut(); router.push("/"); }}
+                  className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
+                  <AiOutlineLogout />
+                  <h2 className="font-bold">Cerrar sesion</h2>
+               </CardBody>
                <CardBody onClick={() => setForm("article")} className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
                   <GrArticle />
                   <h2 className="font-bold">Crear articulo para el blog</h2>

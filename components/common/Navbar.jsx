@@ -9,21 +9,34 @@ import Divider from "./elements/Divider";
 import { AiOutlineClose } from "react-icons/ai";
 import DisclosureServices from "./elements/DisclosureServices";
 import DisclosureCourses from "./elements/DisclosureCourses";
+import Cookies from "js-cookie";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navigation = [
    { label: "Inicio", href: "/" },
    { label: "Nosotros", href: "/about" },
    { label: "Servicios", component: <DropDownServices />, dropMenu: <DisclosureServices /> },
    { label: "Promociones", href: "#" },
-   { label: "Diplomados", component: <DropDownCourses />, dropMenu: <DisclosureCourses/> },
+   { label: "Diplomados", component: <DropDownCourses />, dropMenu: <DisclosureCourses /> },
    { label: "Blog", href: "/blog" },
    { label: "Contacto", href: "#" },
 ];
 
 export default function Navbar() {
    const [mobileNav, setMobileNav] = useState(false);
+   const [showAdmin, setShowAdmin] = useState(false)
+
+   useEffect(() => {
+      const cookie = Cookies.get("session") || null;
+      console.log(cookie);
+      if (cookie) {
+         setShowAdmin(true)
+      } else {
+         setShowAdmin(false)
+      }
+   }, []);
+
    return (
       <nav>
          <div className="relative py-3 shadow">
@@ -44,6 +57,13 @@ export default function Navbar() {
                            </Link>
                         </li>
                      )
+                  )}
+                  {showAdmin && (
+                     <li>
+                        <Link className="text-zinc-900" href="/crud">
+                           Administrador
+                        </Link>
+                     </li>
                   )}
                </ul>
                <div className="hidden justify-self-center sm:block	">
@@ -76,6 +96,13 @@ export default function Navbar() {
                         </li>
                      )
                   )}
+                  {showAdmin && (
+                     <li>
+                        <Link className="text-zinc-900" href="/crud">
+                           Administrador
+                        </Link>
+                     </li>
+                  )}
                </ul>
                <Divider />
                <div className="flex justify-center">
@@ -87,7 +114,8 @@ export default function Navbar() {
                   <AiOutlineClose className="cursor-pointer text-3xl" />
                </Button>
             </div>
-         )}
-      </nav>
+         )
+         }
+      </nav >
    );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/article.module.css";
+import axios from 'axios'
 
 export default function CKeditor({ onChange, name, value }) {
    const editorRef = useRef();
@@ -14,6 +15,43 @@ export default function CKeditor({ onChange, name, value }) {
       setEditorLoaded(true)
    }, []);
 
+   function uploadAdapter(loader) {
+      return {
+         upload: () => {
+            return new Promise((resolve, reject) => {
+               const formData = new FormData();
+               loader.file.then((file) => {
+                  formData.append("files", file);
+                  // fetch(`${process.env.NEXT_PUBLIC_URL_SITE}/api/uploadFileCkeditor`, {
+                  //    method: "POST",
+                  //    body: formData
+                  // })
+                  axios({
+                     method: 'POST',
+                     url: `${process.env.NEXT_PUBLIC_URL_SITE}/api/uploadFileCkeditor`,
+                     data: formData
+                  })
+                     .then((res) => res)
+                     .then((res) => {
+                        resolve({
+                           default: `https://aeyazvfjbvdtcsoxjzre.supabase.co/storage/v1/object/public/articulos/${res.filename}`
+                        });
+                     })
+                     .catch((err) => {
+                        reject(err);
+                     });
+               });
+            });
+         }
+      };
+   }
+
+   function uploadPlugin(editor) {
+      editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
+         return uploadAdapter(loader);
+      };
+   }
+
    return (
       <>
          {editorLoaded ? (
@@ -21,6 +59,9 @@ export default function CKeditor({ onChange, name, value }) {
                className={styles["ck-editor"]}
                type=""
                name={name}
+               config={{
+                  extraPlugins: [uploadPlugin]
+               }}
                editor={ClassicEditor}
                data={value}
                onChange={(event, editor) => {
@@ -33,17 +74,4 @@ export default function CKeditor({ onChange, name, value }) {
          )}
       </>
    );
-}
-
-// Implementacion
-{
-   /* <div>
-   <CKeditor
-      name="description"
-      onChange={(data) => {
-         setData(data);
-      }}
-      editorLoaded={editorLoaded}
-   />
-</div>; */
 }
