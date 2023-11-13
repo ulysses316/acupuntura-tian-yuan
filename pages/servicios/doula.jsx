@@ -2,10 +2,34 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
-
+import Head from "next/head";
 export default function fisicos() {
    return (
       <>
+         <Head>
+            <title>Doula</title>
+            <meta name="description" content="Las doulas son mujeres con formación y experiencia que acompañan a otras mujeres
+               brindando apoyo practico y emocional durante el proceso de embarazo, parto y
+               postparto; la palabra viene de griego “sirva” mujer que sirve, y del hindu “mujer
+               experimentada”" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Doula | Terapias TianYuan" />
+            <meta property="og:description" content="Las doulas son mujeres con formación y experiencia que acompañan a otras mujeres
+               brindando apoyo practico y emocional durante el proceso de embarazo, parto y
+               postparto; la palabra viene de griego “sirva” mujer que sirve, y del hindu “mujer
+               experimentada”" />
+            <meta property="og:image" content="/services/20231024-doula-1.jpg" />
+
+            <meta name="twitter:title" content="Doula | Terapias TianYuan" />
+            <meta name="twitter:description" content="Las doulas son mujeres con formación y experiencia que acompañan a otras mujeres
+               brindando apoyo practico y emocional durante el proceso de embarazo, parto y
+               postparto; la palabra viene de griego “sirva” mujer que sirve, y del hindu “mujer
+               experimentada”" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:image:src" content="/services/20231024-doula-1.jpg" />
+         </Head>
+
          <Navbar />
          <MainLayout className="my-8 lg:px-52">
             <h1 className="py-3 text-center text-3xl font-bold">Doula</h1>

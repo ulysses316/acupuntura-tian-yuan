@@ -3,10 +3,25 @@ import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
 import { BsTelephoneFill } from "react-icons/bs";
-
+import Head from "next/head";
 export default function acupuntura() {
    return (
       <>
+         <Head>
+            <title>Acupuntura</title>
+            <meta name="description" content="La acupuntura es una terapia, que pertenece a uno de los 7 pilares de la medicina tradicional china, donde se utilizan agujas especiales que se aplican en puntos específicos para modular el organismo y generar una respuesta con una finalidad terapéutica." />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Acupuntura | Terapias TianYuan" />
+            <meta property="og:description" content="La acupuntura es una terapia, que pertenece a uno de los 7 pilares de la medicina tradicional china, donde se utilizan agujas especiales que se aplican en puntos específicos para modular el organismo y generar una respuesta con una finalidad terapéutica." />
+            <meta property="og:image" content="/services/20231014-acupuntura-1.png" />
+
+            <meta name="twitter:title" content="Acupuntura | Terapias TianYuan" />
+            <meta name="twitter:description" content="La acupuntura es una terapia, que pertenece a uno de los 7 pilares de la medicina tradicional china, donde se utilizan agujas especiales que se aplican en puntos específicos para modular el organismo y generar una respuesta con una finalidad terapéutica." />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:image:src" content="/services/20231014-acupuntura-1.png" />
+         </Head>
+
          <Navbar />
          <MainLayout className="my-8 lg:px-52">
             <h1 className="text-center text-3xl font-bold">Acupuntura</h1>

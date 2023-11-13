@@ -2,10 +2,25 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
-
+import Head from "next/head";
 export default function masajes() {
     return (
         <>
+            <Head>
+                <title>Masajes</title>
+                <meta name="description" content="El masaje es un procedimiento terapéutico en el que se utilizan las manos del terapeuta como una fuerza mecánica sobre el cuerpo mediante técnicas especiales y dosificadas a las necesidades de cada paciente." />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Masajes | Terapias TianYuan" />
+                <meta property="og:description" content="El masaje es un procedimiento terapéutico en el que se utilizan las manos del terapeuta como una fuerza mecánica sobre el cuerpo mediante técnicas especiales y dosificadas a las necesidades de cada paciente." />
+                <meta property="og:image" content="/services/20231024-masoterapia.jpg" />
+
+                <meta name="twitter:title" content="Masajes | Terapias TianYuan" />
+                <meta name="twitter:description" content="El masaje es un procedimiento terapéutico en el que se utilizan las manos del terapeuta como una fuerza mecánica sobre el cuerpo mediante técnicas especiales y dosificadas a las necesidades de cada paciente." />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:widgets:new-embed-design" content="on" />
+                <meta name="twitter:image:src" content="/services/20231024-masoterapia.jpg" />
+            </Head>
+
             <Navbar />
             <MainLayout className="my-8 lg:px-52">
                 <h1 className="py-3 text-center text-3xl font-bold">Masajes</h1>

@@ -2,10 +2,25 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
-
+import Head from "next/head";
 export default function fisioterapia() {
    return (
       <>
+         <Head>
+            <title>Fisioterapia y rehabilitación físca</title>
+            <meta name="description" content="La fisioterapia tiene como objetivo mejorar la función articular, muscular y nerviosa, con la finalidad de recuperar y aumentar la calidad de vida de las personas; en las esferas de promoción, prevención, tratamiento o intervención, habilitación y rehabilitación. Estas esferas abarcan el bienestar físico, psicológico, emocional y social de un individuo." />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Fisioterapia y rehabilitación físca | Terapias TianYuan" />
+            <meta property="og:description" content="La fisioterapia tiene como objetivo mejorar la función articular, muscular y nerviosa, con la finalidad de recuperar y aumentar la calidad de vida de las personas; en las esferas de promoción, prevención, tratamiento o intervención, habilitación y rehabilitación. Estas esferas abarcan el bienestar físico, psicológico, emocional y social de un individuo." />
+            <meta property="og:image" content="/services/fisioterapia-1.webp" />
+
+            <meta name="twitter:title" content="Fisioterapia y rehabilitación físca | Terapias TianYuan" />
+            <meta name="twitter:description" content="La fisioterapia tiene como objetivo mejorar la función articular, muscular y nerviosa, con la finalidad de recuperar y aumentar la calidad de vida de las personas; en las esferas de promoción, prevención, tratamiento o intervención, habilitación y rehabilitación. Estas esferas abarcan el bienestar físico, psicológico, emocional y social de un individuo." />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:image:src" content="/services/fisioterapia-1.webp" />
+         </Head>
+
          <Navbar />
          <MainLayout className="my-8 lg:px-52">
             <h1 className="py-3 text-center text-3xl font-bold">

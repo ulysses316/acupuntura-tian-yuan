@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer";
 
 import CKeditor from "@/components/common/CKeditor";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 export default function About() {
    const [editorLoaded, setEditorLoaded] = useState(false);
@@ -14,6 +15,22 @@ export default function About() {
    }, []);
    return (
       <>
+
+         <Head>
+            <title>Sobre nosotros</title>
+            <meta name="description" content="Conoce a la talentosa directora de la clínica 'Terapias Integrativas Tian Yuan'. Experta en acupuntura y docente destacada en el diplomado de Mesoterapia" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Nosotros | Terapias TianYuan" />
+            <meta property="og:description" content="Conoce a la talentosa directora de la clínica 'Terapias Integrativas Tian Yuan'. Experta en acupuntura y docente destacada en el diplomado de Mesoterapia" />
+            <meta property="og:image" content="/logo.png" />
+
+            <meta name="twitter:title" content="Nosotros | Terapias TianYuan" />
+            <meta name="twitter:description" content="Conoce a la talentosa directora de la clínica 'Terapias Integrativas Tian Yuan'. Experta en acupuntura y docente destacada en el diplomado de Mesoterapia" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:image:src" content="/logo.png" />
+         </Head>
+
          <Navbar />
          <MainLayout>
             <div className="flex flex-col justify-center py-8 md:px-36">

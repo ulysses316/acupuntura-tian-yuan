@@ -2,10 +2,26 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
+import Head from "next/head";
 
 export default function acupuntura() {
     return (
         <>
+            <Head>
+                <title>Acupuntura</title>
+                <meta name="description" content="Conviértete en terapeuta especializado en acupuntura en solo 12 meses. Opción de certificación con validez SEP y RENADEP, que incluye título honorífico, diploma, cédula de identidad, constancia SEP, y más." />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Acupuntura | Terapias TianYuan" />
+                <meta property="og:description" content="Conviértete en terapeuta especializado en acupuntura en solo 12 meses. Opción de certificación con validez SEP y RENADEP, que incluye título honorífico, diploma, cédula de identidad, constancia SEP, y más." />
+                <meta property="og:image" content="/logo.png" />
+
+                <meta name="twitter:title" content="Acupuntura | Terapias TianYuan" />
+                <meta name="twitter:description" content="Conviértete en terapeuta especializado en acupuntura en solo 12 meses. Opción de certificación con validez SEP y RENADEP, que incluye título honorífico, diploma, cédula de identidad, constancia SEP, y más." />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:widgets:new-embed-design" content="on" />
+                <meta name="twitter:image:src" content="/diplomados/20231024-origen-acupuntura.jpg" />
+            </Head>
+
             <Navbar />
             <MainLayout className="my-8 lg:px-52">
                 <h1 className="text-center text-3xl font-bold">Acupuntura</h1>

@@ -2,10 +2,25 @@ import React from "react";
 import Navbar from "@/components/common/Navbar";
 import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
-
+import Head from "next/head";
 export default function ventosas() {
     return (
         <>
+            <Head>
+                <title>Ventosas terapéuticas</title>
+                <meta name="description" content="Conviértete en terapeuta especializado en ventosas terapéuticas en solo 8 horas." />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Ventosas terapéuticas | Terapias TianYuan" />
+                <meta property="og:description" content="Conviértete en terapeuta especializado en ventosas terapéuticas en solo 8 horas." />
+                <meta property="og:image" content="/logo.png" />
+
+                <meta name="twitter:title" content="Ventosas terapéuticas | Terapias TianYuan" />
+                <meta name="twitter:description" content="Conviértete en terapeuta especializado en ventosas terapéuticas en solo 8 horas." />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:widgets:new-embed-design" content="on" />
+                <meta name="twitter:image:src" content="/services/20231024-ventosas.jpg" />
+            </Head>
+
             <Navbar />
             <MainLayout className="my-8 lg:px-52">
                 <h1 className="text-center text-3xl font-bold">Ventosas terapéuticas</h1>
