@@ -1,5 +1,11 @@
 [
-   { "name": "a", "src": "https://loremflickr.com/1200/899" },
-   { "name": "b", "src": "/promociones/Texto.png" },
-   { "name": "c", "src": "https://dummyimage.com/1200x899/44403c/aaa" }
+   { "name": "a", "src": "/promociones/1.png" },
+   { "name": "b", "src": "/promociones/2.png" },
+   { "name": "c", "src": "/promociones/3.png" },
+   { "name": "c", "src": "/promociones/4.jpg" },
+   { "name": "c", "src": "/promociones/5.jpg" },
+   { "name": "c", "src": "/promociones/6.png" },
+   { "name": "c", "src": "/promociones/7.png" },
+   { "name": "c", "src": "/promociones/8.png" },
+   { "name": "c", "src": "/promociones/9.png" }
 ]

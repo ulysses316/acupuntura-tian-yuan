@@ -12,11 +12,13 @@ export default function Home() {
    return (
       <>
          <Navbar />
-         <MainCarousel />
+         <section className="sm:container sm:mx-auto sm:px-0">
+            <MainCarousel />
+         </section>
          <MainLayout>
             <WhatsAppWidget />
             <h2 className="text-center py-12 text-3xl font-bold">Nuestros Servicios más populares</h2>
-            <CardCarousel/>
+            <CardCarousel />
             <h2 className="text-center py-12 text-3xl font-bold">Visita nuestras instalaciones</h2>
             <Map className="h-96 w-full" />
          </MainLayout>

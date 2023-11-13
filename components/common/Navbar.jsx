@@ -17,10 +17,10 @@ const navigation = [
    { label: "Inicio", href: "/" },
    { label: "Nosotros", href: "/about" },
    { label: "Servicios", component: <DropDownServices />, dropMenu: <DisclosureServices /> },
-   { label: "Promociones", href: "#" },
+   // { label: "Promociones", href: "#" },
    { label: "Diplomados", component: <DropDownCourses />, dropMenu: <DisclosureCourses /> },
-   { label: "Blog", href: "/blog" },
-   { label: "Contacto", href: "#" },
+   // { label: "Blog", href: "/blog" },
+   // { label: "Contacto", href: "#" },
 ];
 
 export default function Navbar() {

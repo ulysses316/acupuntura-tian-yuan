@@ -39,7 +39,7 @@
       "title": "Moxibustion",
       "desc": "Es parte integral de la medicina tradicional china, basada en la estimulación de puntos de acupuntura por medio del calor, a través de la combustión de una planta llamada >artemisa vulgaris< , con una finalidad terapéutica; genera un efecto parecido que el calentamiento con láser, haciendo que los vasos sanguíneos se dilaten y lleven todos los componentes sanguíneos a la zona tratada",
       "url": "/servicios/moxibustion",
-      "benefits": [],
+      "benefits": ["Desinflamar", "Generar calor", "Analgésico"],
       "img": "/cards/moxibustion.png"
    },
    {
