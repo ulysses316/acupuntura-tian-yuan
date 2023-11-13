@@ -23,6 +23,7 @@ const navigation = [
    // { label: "Contacto", href: "#" },
 ];
 
+
 export default function Navbar() {
    const [mobileNav, setMobileNav] = useState(false);
    const [showAdmin, setShowAdmin] = useState(false)
