@@ -68,7 +68,9 @@ export default function Navbar() {
                   )}
                </ul>
                <div className="hidden justify-self-center sm:block	">
-                  <Button className="bg-primary-blue text-white">Agendar una cita</Button>
+                  <Link target="__blank" href="https://wa.me/5558263542?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita">
+                     <Button className="bg-primary-blue text-white">Agendar una cita</Button>
+                  </Link>
                </div>
             </div>
             <Button
