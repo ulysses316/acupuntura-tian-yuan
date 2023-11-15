@@ -121,7 +121,7 @@ export default function acupuntura() {
                   </div>
                </div>
                <p className="text-md text-center font-bold md:text-xl">
-                  @terapias intregraticas Tian Yuan
+                  @terapias integrativas Tian Yuan
                </p>
             </div>
          </MainLayout>
