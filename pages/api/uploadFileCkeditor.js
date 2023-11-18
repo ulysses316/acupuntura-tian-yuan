@@ -1,26 +1,57 @@
-/**
- * Handles an HTTP request to upload an image file to a storage service using Supabase.
- * Returns a JSON response.
- *
- * @param {Object} req - The HTTP request object.
- * @param {Object} res - The HTTP response object.
- * @returns {Object} - The JSON response with a status code of 200 and a data property containing the string "image".
- */
+import formidable from "formidable";
 import supabase from "@/lib/clientSupaBase";
-import fs from "fs";
-import image from "@/public/diplomados/20231024-acupuntura-1.jpg";
 import slugify from "slugify";
-import { DateTime } from "luxon";
+import * as fs from "fs";
 
-const handler = async (req, res) => {
+async function saveFormData(files) {
+   const image = files.file?.[0];
+   const { filepath, newFilename, originalFilename, mimetype } = image;
+   const srcToFile = fs.readFileSync(filepath);
+
    const { data, error } = await supabase.storage
       .from("articulos")
-      .upload(slugify(`${DateTime.utc().toISO()}-article.png`, { lower: true }), image, {
+      .upload(`public/${slugify(originalFilename, { lower: true })}`, srcToFile, {
          cacheControl: "3600",
-         upsert: true,
-         contentType: "image/jpg",
+         upsert: false,
+         contentType: mimetype,
       });
-   res.status(200).json({ data: "image" });
+}
+
+async function handlePostFormReq(req, res) {
+   const form = formidable({ multiples: true });
+   const formData = new Promise((resolve, reject) => {
+      form.parse(req, async (err, fields, files) => {
+         if (err) {
+            reject("error");
+         }
+         resolve({ fields, files });
+      });
+   });
+
+   const { files } = await formData;
+
+   try {
+      await saveFormData(files);
+      res.status(200).send({ status: "submitted" });
+      return;
+   } catch (e) {
+      res.status(500).send({ status: "something went wrong", error: e });
+      return;
+   }
+}
+
+const handler = async (req, res) => {
+   if (req.method == "POST") {
+      await handlePostFormReq(req, res);
+   } else {
+      res.status(404).send("method not found");
+   }
+};
+
+export const config = {
+   api: {
+      bodyParser: false,
+   },
 };
 
 export default handler;

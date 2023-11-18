@@ -4,7 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import CardServices from "../common/cards/CardServices";
 import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/core";
-import data from '@/CardServices.json'
+import data from '@/json/CardServices.json'
 
 export default function CardCarousel() {
     return (
