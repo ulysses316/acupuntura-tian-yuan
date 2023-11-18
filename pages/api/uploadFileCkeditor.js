@@ -32,7 +32,7 @@ async function handlePostFormReq(req, res) {
 
    try {
       await saveFormData(files);
-      res.status(200).send({ status: "submitted" });
+      res.status(200).send({ status: "submitted", filename: files.file?.[0].originalFilename });
       return;
    } catch (e) {
       res.status(500).send({ status: "something went wrong", error: e });

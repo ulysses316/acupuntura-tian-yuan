@@ -5,7 +5,6 @@ import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
 import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import CardBody from "@/components/common/cards/CardBody";
-import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 
 import supabase from "@/lib/clientSupaBase";
 import slugify from 'slugify'

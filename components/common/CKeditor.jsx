@@ -21,11 +21,7 @@ export default function CKeditor({ onChange, name, value }) {
             return new Promise((resolve, reject) => {
                const formData = new FormData();
                loader.file.then((file) => {
-                  formData.append("files", file);
-                  // fetch(`${process.env.NEXT_PUBLIC_URL_SITE}/api/uploadFileCkeditor`, {
-                  //    method: "POST",
-                  //    body: formData
-                  // })
+                  formData.append("file", file);
                   axios({
                      method: 'POST',
                      url: `${process.env.NEXT_PUBLIC_URL_SITE}/api/uploadFileCkeditor`,
@@ -33,8 +29,9 @@ export default function CKeditor({ onChange, name, value }) {
                   })
                      .then((res) => res)
                      .then((res) => {
+                        console.log(res);
                         resolve({
-                           default: `https://aeyazvfjbvdtcsoxjzre.supabase.co/storage/v1/object/public/articulos/${res.filename}`
+                           default: `https://aeyazvfjbvdtcsoxjzre.supabase.co/storage/v1/object/public/articulos/public/${res.data.filename}`
                         });
                      })
                      .catch((err) => {
