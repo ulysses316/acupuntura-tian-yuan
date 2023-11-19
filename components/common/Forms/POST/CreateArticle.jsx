@@ -8,6 +8,7 @@ import * as Yup from 'yup'
 import slugify from 'slugify'
 import Swal from 'sweetalert2'
 import { useRouter } from 'next/router'
+import axios from 'axios'
 
 export default function CreateArticle() {
     const router = useRouter();
@@ -24,32 +25,32 @@ export default function CreateArticle() {
         }),
         onSubmit: async (values) => {
             try {
-                const request = await fetch("/api/articles/create", {
+                const {status, data, error} = await axios({
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
+                    url: `/api/articles/create`,
+                    data: {
                         title: values.title,
                         body: values.body,
                         active: values.active,
                         slug: slugify(values.title, { lower: true })
-                    })
+                    }
                 })
-                const response = await request.json();
-                if (response.code === 200) {
+
+                if (status === 200) {
                     Swal.fire({
                         title: "Artículo creado correctamente.",
                         icon: "success"
                     }).then(() => {
-                        router.push(`/blog/${response.data[0].slug}`)
+                        router.push(`/blog/${data.data[0].slug}`)
                     })
                 }
 
-                if (response.code === 500) {
+                if (status === 500) {
                     Swal.fire({
                         title: "Ocurrio un error al crear el articulo.",
                         html: `
                             <pre>
-                                <code>${JSON.stringify(response.error, null, 2)}</code>
+                                <code>${JSON.stringify(error, null, 2)}</code>
                             </pre>
                             `,
                         icon: "error"

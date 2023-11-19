@@ -7,7 +7,10 @@ import { Formik, useFormik } from 'formik'
 import * as Yup from 'yup'
 import slugify from 'slugify'
 import axios from 'axios'
-export default function PutArticle({articleData}) {
+import Swal from 'sweetalert2'
+import { useRouter } from 'next/router'
+export default function PutArticle({ articleData }) {
+    const router = useRouter();
     const formik = useFormik({
         initialValues: {
             title: articleData.title,
@@ -21,19 +24,39 @@ export default function PutArticle({articleData}) {
         }),
         onSubmit: async (values) => {
             try {
-                const request = await fetch(`/api/articles/update`, {
+                const { status, data, error } = await axios({
                     method: "PUT",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
+                    url: `/api/articles/update`,
+                    data: {
                         id: articleData.id,
                         title: values.title,
                         body: values.body,
                         active: values.active,
                         slug: slugify(values.title, { lower: true })
-                    })
+                    }
                 })
-                const response = await request.json();
-                console.log(response);
+
+                if (status === 200) {
+                    Swal.fire({
+                        title: "Artículo actualizado correctamente.",
+                        icon: "success"
+                    }).then(() => {
+                        router.push(`/blog/${data.data[0].slug}`)
+                    })
+                }
+
+                if (response.code === 500) {
+                    Swal.fire({
+                        title: "Ocurrio un error al crear el articulo.",
+                        html: `
+                            <pre>
+                                <code>${JSON.stringify(error, null, 2)}</code>
+                            </pre>
+                            `,
+                        icon: "error"
+                    })
+                }
+
             } catch (error) {
                 console.log(error);
             }
@@ -73,7 +96,7 @@ export default function PutArticle({articleData}) {
                 />
             </div>
             <div className='flex justify-center mt-2'>
-                <Button className={"bg-primary-blue text-white"} type='submit'>Crear articulo</Button>
+                <Button className={"bg-primary-blue text-white"} type='submit'>Actualizar articulo</Button>
             </div>
         </form>
     )

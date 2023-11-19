@@ -9,11 +9,11 @@ import axios from 'axios'
 export default function UpdateArticle() {
     const [article, setArticle] = useState("");
     const router = useRouter();
-    const [id, setId] = useState("")
+    const [id, setId] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
-            if (typeof id !== "undefined") {
+            if (id !== null) {
                 const response = await axios({
                     url: `${process.env.NEXT_PUBLIC_URL_SITE}/api/articles/${id}`,
                 });
@@ -21,7 +21,7 @@ export default function UpdateArticle() {
             }
         }
         fetchData()
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         setId(router.query.id)
