@@ -32,7 +32,7 @@ export const config = {
       "/api/auth/logout",
       "/api/createArticle",
       "/api/uploadFileCkeditor",
-      "/crud",
+      "/admin",
       "/signup",
    ],
 };

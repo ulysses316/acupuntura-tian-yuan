@@ -5,8 +5,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
 import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import CardBody from "@/components/common/cards/CardBody";
-
-import supabase from "@/lib/clientSupaBase";
+import axios from 'axios'
 
 export default function Article({ article }) {
     return (
@@ -15,9 +14,9 @@ export default function Article({ article }) {
             <MainLayout>
                 <WhatsAppWidget />
                 <h1 className="py-12 text-center text-3xl font-bold">
-                    {article.title}
+                    {article.title || "Hola"}
                 </h1>
-                <div className="ck-content" dangerouslySetInnerHTML={{ __html: article.body }} />
+                <div className="ck-content" dangerouslySetInnerHTML={{ __html: article.body || "!" }} />
             </MainLayout>
             <Footer />
         </>
@@ -25,20 +24,18 @@ export default function Article({ article }) {
 }
 
 export const getServerSideProps = async (context) => {
-    const { req } = context;
-    let paramUrl = req.url;
-    let url = new URL(paramUrl, "http://localhost.com");
+    const { slug } = context.params;
+    
+    const { data, error } = await axios.get(`${process.env.NEXT_PUBLIC_URL_SITE}/api/articles/slug`, {
+        data: {
+            slug: slug
+        }
+    })
 
-    let slug = url.searchParams.has("slug")
-        ? url.searchParams.get("slug")
-        : url.pathname.replace("/blog/", "");
-
-    let { data, error } = await supabase
-        .from('Articles')
-        .select('*')
-        .eq('slug', slug)
-
-    const article = data[0];
+    let article;
+    if (data) {
+        article = data.data[0]
+    }
 
     return {
         props: {

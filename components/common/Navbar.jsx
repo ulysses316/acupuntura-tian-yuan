@@ -61,7 +61,7 @@ export default function Navbar() {
                   )}
                   {showAdmin && (
                      <li>
-                        <Link className="text-zinc-900" href="/crud">
+                        <Link className="text-zinc-900" href="/admin">
                            Administrador
                         </Link>
                      </li>
@@ -101,7 +101,7 @@ export default function Navbar() {
                   )}
                   {showAdmin && (
                      <li>
-                        <Link className="text-zinc-900" href="/crud">
+                        <Link className="text-zinc-900" href="/admin">
                            Administrador
                         </Link>
                      </li>

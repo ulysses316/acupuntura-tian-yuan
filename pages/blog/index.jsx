@@ -5,9 +5,8 @@ import MainLayout from "@/components/layouts/MainLayout";
 import Footer from "@/components/common/Footer";
 import WhatsAppWidget from "@/components/common/elements/WhatsAppWidget";
 import CardBody from "@/components/common/cards/CardBody";
-
-import supabase from "@/lib/clientSupaBase";
 import slugify from 'slugify'
+import axios from 'axios'
 
 export default function index({ articles }) {
    return (
@@ -36,9 +35,8 @@ export default function index({ articles }) {
 }
 
 export const getServerSideProps = async () => {
-   let { data, error } = await supabase.from("Articles").select("*");
-   const articles = data;
-
+   const { data, error } = await axios.get(`${process.env.NEXT_PUBLIC_URL_SITE}/api/articles/`)
+   const articles = data.data;
    return {
       props: {
          articles: articles,

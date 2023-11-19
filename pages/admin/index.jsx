@@ -14,7 +14,7 @@ import CreateArticle from "@/components/common/Forms/POST/CreateArticle";
 import CreateService from "@/components/common/Forms/POST/CreateService";
 import CreatePromotion from "@/components/common/Forms/POST/CreatePromotion";
 
-import TableData from "@/components/common/elements/TableData";
+import ArticlesTable from "@/components/common/elements/ArticlesTable";
 
 import { GrArticle } from 'react-icons/gr'
 import { AiFillFire, AiFillDelete, AiFillEdit, AiOutlineUserAdd, AiOutlineLogout } from 'react-icons/ai'
@@ -43,10 +43,12 @@ export default function Crud({ articles }) {
                   <AiOutlineLogout />
                   <h2 className="font-bold">Cerrar sesion</h2>
                </CardBody>
-               <CardBody onClick={() => setForm("article")} className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
-                  <GrArticle />
-                  <h2 className="font-bold">Crear articulo para el blog</h2>
-               </CardBody>
+               <Link href={"/admin/articles/create"}>
+                  <CardBody className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
+                     <GrArticle />
+                     <h2 className="font-bold">Crear articulo para el blog</h2>
+                  </CardBody>
+               </Link>
                <CardBody onClick={() => setForm("promocion")} className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
                   <AiFillFire />
                   <h2 className="font-bold">Crear promocion</h2>
@@ -55,7 +57,8 @@ export default function Crud({ articles }) {
                   <FaHammer />
                   <h2 className="font-bold">Crear Servicio</h2>
                </CardBody>
-               <CardBody onClick={() => setForm("handdleArticles")} className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
+               <Link href={"/admin/articles"}>
+               <CardBody className={"flex flex-col gap-3 justify-center items-center cursor-pointer svg-container-crud"}>
                   <div className="flex gap-4">
                      <AiFillEdit />
                      <AiFillDelete />
@@ -63,12 +66,11 @@ export default function Crud({ articles }) {
                   </div>
                   <h2 className="font-bold">Editar Eliminar Articulo</h2>
                </CardBody>
+               </Link>
             </div>
             <div>
-               {form === "article" && <CreateArticle />}
                {form === "promocion" && <CreatePromotion />}
                {form === "service" && <CreateService />}
-               {form === "handdleArticles" && <TableData articles={articles} />}
             </div>
          </MainLayout>
          <Footer />

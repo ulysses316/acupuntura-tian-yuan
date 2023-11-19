@@ -6,15 +6,12 @@ import Toggle from '../../elements/Toogle'
 import { Formik, useFormik } from 'formik'
 import * as Yup from 'yup'
 import slugify from 'slugify'
-import Swal from 'sweetalert2'
-import { useRouter } from 'next/router'
-
-export default function CreateArticle() {
-    const router = useRouter();
+import axios from 'axios'
+export default function PutArticle({articleData}) {
     const formik = useFormik({
         initialValues: {
-            title: "",
-            body: "",
+            title: articleData.title,
+            body: articleData.body,
             active: true
         },
         validationSchema: Yup.object({
@@ -24,10 +21,11 @@ export default function CreateArticle() {
         }),
         onSubmit: async (values) => {
             try {
-                const request = await fetch("/api/articles/create", {
-                    method: "POST",
+                const request = await fetch(`/api/articles/update`, {
+                    method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
+                        id: articleData.id,
                         title: values.title,
                         body: values.body,
                         active: values.active,
@@ -35,26 +33,7 @@ export default function CreateArticle() {
                     })
                 })
                 const response = await request.json();
-                if (response.code === 200) {
-                    Swal.fire({
-                        title: "Artículo creado correctamente.",
-                        icon: "success"
-                    }).then(() => {
-                        router.push(`/blog/${response.data[0].slug}`)
-                    })
-                }
-
-                if (response.code === 500) {
-                    Swal.fire({
-                        title: "Ocurrio un error al crear el articulo.",
-                        html: `
-                            <pre>
-                                <code>${JSON.stringify(response.error, null, 2)}</code>
-                            </pre>
-                            `,
-                        icon: "error"
-                    })
-                }
+                console.log(response);
             } catch (error) {
                 console.log(error);
             }
@@ -70,7 +49,7 @@ export default function CreateArticle() {
                     </div>
                 ) : null}
                 <label className='font-bold'>Titulo</label>
-                <input className='outline-none border rounded-md py-1 px-2' onChange={formik.handleChange} name='title' type="text" />
+                <input className='outline-none border rounded-md py-1 px-2' value={formik.values.title} onChange={formik.handleChange} name='title' type="text" />
             </div>
             <div className='flex flex-col gap-2'>
                 {formik.touched.body && formik.errors.body ? (
@@ -79,7 +58,7 @@ export default function CreateArticle() {
                     </div>
                 ) : null}
                 <label className='font-bold'>Ingresa aqui el contenido que quieres en el articulo</label>
-                <CKeditor name="body" value={formik.body} onChange={(value) => formik.setFieldValue("body", value)} />
+                <CKeditor name="body" value={formik.values.body} onChange={(value) => formik.setFieldValue("body", value)} />
             </div>
             <div className='flex flex-col gap-2'>
                 {formik.touched.active && formik.errors.active ? (

@@ -32,7 +32,7 @@ export default function Signup() {
 
             if (response.status === 200) {
                 Cookies.set("session", JSON.stringify(response.data.message.session))
-                router.push("/crud")
+                router.push("/admin")
             }
         }
     })
