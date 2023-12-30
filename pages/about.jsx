@@ -61,10 +61,10 @@ export default function About() {
                <p>
                   Participacion en la elaboración del
                   Capítulo Origen de la Investigación y el Método Científico del libro: 
-                  <span className="uppercase font-bold"> "metodología de la investigación y estadística aplicadas a las ciencias de la salud", unam, 2023</span>
+                  <span className="uppercase font-bold">    &quot;metodología de la investigación y estadística aplicadas a las ciencias de la salud&quot;, unam, 2023</span>
                </p>
                <p>
-                  Participación en la elaboración del libro "Corazón pulmón, más allá de la muerte, más allá del final" ISBN 978-607-99415-2-9, 2023
+                  Participación en la elaboración del libro &quot;Corazón pulmón, más allá de la muerte, más allá del final&quot; ISBN 978-607-99415-2-9, 2023
                </p>
                <h4 className="my-4 text-xl font-bold">Formación académica</h4>
                <ul className="my-4 list-disc pl-8">
